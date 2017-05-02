@@ -1,0 +1,38 @@
+{
+  "name": "batchlevel",
+  "version": "0.0.1",
+  "description": "batch an entire leveldb database",
+  "main": "index.js",
+  "keywords": [
+    "batch",
+    "leveldb",
+    "level",
+    "levelup",
+    "leveldown"
+  ],
+  "dependencies": {
+    "abstract-leveldown": "^2.6.1",
+    "levelup": "^1.3.5"
+  },
+  "devDependencies": {
+    "memdb": "^1.3.1",
+    "subleveldown": "^2.1.0",
+    "tape": "^4.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/biobricks/batchlevel.git"
+  },
+  "author": "Marc Juul",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/biobricks/batchlevel/issues"
+  },
+  "homepage": "https://github.com/biobricks/batchlevel",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/tape tests/*.js"
+  }
+}
