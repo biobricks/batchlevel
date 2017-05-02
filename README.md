@@ -1,7 +1,7 @@
 
 Like .batch() but for all operations on a levelup database.
 
-This let's you batch operations across multiple sublevels:
+This lets you batch operations across multiple sublevels:
 
 ```
 var memdb = require('memdb');
