@@ -45,7 +45,6 @@ BatchDown.prototype.setDb = function () {
 }
 
 BatchDown.prototype.put = function (key, value, opts, cb) {
-
   var o = {type: 'put', key: key, value: value};
 
   if(opts.keyEncoding) o.keyEncoding = opts.keyEncoding;
@@ -60,10 +59,9 @@ BatchDown.prototype._get = function (key, opts, cb) {
 }
 
 BatchDown.prototype._del = function (key, opts, cb) {
-  var o = {type: 'del', key: key, value: value};
+  var o = {type: 'del', key: key};
 
   if(opts.keyEncoding) o.keyEncoding = opts.keyEncoding;
-  if(opts.valueEncoding) o.valueEncoding = opts.valueEncoding;
 
   this._add(o);
   if(cb) process.nextTick(cb);
@@ -126,6 +124,7 @@ module.exports = function(db, opts) {
     operations = [];
 
     db.batch(ops, cb);
+
   };
 
   return lup;
